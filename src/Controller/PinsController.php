@@ -13,6 +13,21 @@ class PinsController extends AbstractController
     #[Route('/', name: 'app_home')]
     public function index(PinRepository $repository): Response
     {
+
+        $manager = $this->get('doctrine')->getManager();
+
+        // dd($manager);
+        $pin = new Pin();
+
+        $pin->setTitle('dsbdshbdsbhqbdsqd');
+        $pin->setDescription('dsbdshbdsbhqbdsqd');
+
+        $manager->persist($pin);
+        $manager->flush();
+
+            die;
+
+
         $pins = $repository->findBy([], ['updatedAt' => 'DESC']);
 
         return $this->render('pins/index.html.twig', compact('pins'));
