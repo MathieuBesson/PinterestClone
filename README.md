@@ -23,6 +23,7 @@ Projet crée dans le but de comprendre Symfony, son fonctionnement et son archit
 
 * Composer
 * PHP8
+* Git
 
 ### Installation
 
