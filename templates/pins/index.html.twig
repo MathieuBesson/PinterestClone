@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} Home{% endblock %}
+
+{% block body %}
+
+<h1>{{ pins|length }} {{ pluralize(pins|length, 'Pin') }}</h1>
+
+{% for pin in pins %}
+    <article>
+        <h2>{{ pin.title }}</h2>
+        <p>{{ pin.description }}</p>
+    </article>
+{% else  %}
+    <p>Pas de pins en vue !</p>
+{% endfor %}
+
+{% endblock %}
