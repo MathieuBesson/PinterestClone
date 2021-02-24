@@ -41,7 +41,7 @@ Projet crée dans le but de comprendre Symfony, son fonctionnement et son archit
 
 4. Lancer les migrations
     ```sh
-    php symfony console doctrine:migrations:migrate
+    php bin/console doctrine:migrations:migrate
     ```
 
 5. Lancer le serveur
