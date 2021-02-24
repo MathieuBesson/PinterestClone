@@ -4,14 +4,7 @@
 
 {% block body %}
 <h1>Create Pin</h1>
-{{ form_start(form) }}
 
-{{ form_widget(form) }}
-
-<button type="submit">Créer un Pin !</button>
-
-
-{{ form_end(form) }}
-
+{{ include('pins/_form.html.twig', {'submitButtonText': 'Créer le pin !'})}}
 
 {% endblock %}
